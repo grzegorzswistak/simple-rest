@@ -25,9 +25,6 @@ fi
 if [ -f "${JBOSS_CONTAINER_PROMETHEUS_MODULE}/prometheus-opts" ]; then
     JAVA_OPTS="${JAVA_OPTS} $(source ${JBOSS_CONTAINER_PROMETHEUS_MODULE}/prometheus-opts && get_prometheus_opts)"
 fi
-
-JAVA_OPTS="-Djava.net.useSystemProxies=true ${JAVA_OPTS} "
-
 export JAVA_OPTS
 export JAVA_OPTIONS="$JAVA_OPTS"
 
